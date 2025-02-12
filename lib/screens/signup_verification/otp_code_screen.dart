@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../../components/constrains.dart';
 
-class OtpCodeScreen extends StatelessWidget {
+class OtpCodeScreen extends StatefulWidget {
   const OtpCodeScreen({super.key});
+
+  @override
+  State<OtpCodeScreen> createState() => _OtpCodeScreenState();
+}
+
+class _OtpCodeScreenState extends State<OtpCodeScreen> {
+
+  final TextEditingController otpCtrl = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -47,98 +56,41 @@ class OtpCodeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              
+
               SizedBox(
                 height: 70,
               ),
-              
+
               Text('Code has been Send to abc@gmail.com',style: kRandomTextStyle,),
 
               SizedBox(
                 height: 20,
               ),
 
-              //OTP Row
-              Row(
-                children: [
+             //TODO OTP Row Implement Here
 
-                  Expanded(
-                    child: Container(
-                      height: 70,
-                      width: 60,
-                      decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        //border: OutlineInputBorder()
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Color(0XFFCACACA),width: 1),// Rounded corners
-                      ),
-
-                      child: Align(
-                          alignment: Alignment.center,
-                          child: Text('5',style: kOtpTextStyle,)),
-                    ),
-                  ),
-
-                  SizedBox(width: 10,),
-
-                  Expanded(
-                    child: Container(
-                      height: 70,
-                      width: 60,
-                      decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        //border: OutlineInputBorder()
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Color(0XFFCACACA),width: 1),// Rounded corners
-                      ),
-
-                      child: Align(
-                          alignment: Alignment.center,
-                          child: Text('5',style: kOtpTextStyle,)),
-                    ),
-                  ),
-
-                  SizedBox(width: 10,),
-
-                  Expanded(
-                    child: Container(
-                      height: 70,
-                      width: 60,
-                      decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        //border: OutlineInputBorder()
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Color(0XFFCACACA),width: 1),// Rounded corners
-                      ),
-                      child: Align(
-                          alignment: Alignment.center,
-                          child: Text('5',style: kOtpTextStyle,)),
-                    ),
-                  ),
-
-                  SizedBox(width: 10,),
-
-
-                  Expanded(
-                    child: Container(
-                      height: 70,
-                      width: 60,
-                      decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        //border: OutlineInputBorder()
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Color(0XFFCACACA),width: 1),// Rounded corners
-                      ),
-                      
-                      child: Align(
-                        alignment: Alignment.center,
-                          child: Text('5',style: kOtpTextStyle,)),
-                    ),
-                  ),
-
-
-                ],
+              PinCodeTextField(
+                controller: otpCtrl,
+                length: 4,
+                animationType: AnimationType.fade,
+                keyboardType: TextInputType.number,
+                pinTheme: PinTheme(
+                    borderWidth: 1,
+                    //borderWidth: Border.all(color: Color(0XFFCACACA),width: 1),
+                    shape: PinCodeFieldShape.box,
+                    borderRadius: BorderRadius.circular(5),
+                    inactiveColor: Colors.transparent, // Border color when not filled
+                    fieldHeight: 70,
+                    fieldWidth: 70,
+                    activeFillColor: Color(0XFFCACACA),
+                    inactiveFillColor: Colors.white,
+                    selectedFillColor: Colors.white),
+                animationDuration: const Duration(milliseconds: 300),
+                backgroundColor: Colors.transparent,
+                enableActiveFill: true,
+                appContext: context,
               ),
+
 
               SizedBox(height: 30,),
 
