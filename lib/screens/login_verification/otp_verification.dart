@@ -1,34 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:pickball/Widget/getOtpWidget.dart';
+import 'package:pickball/screens/login_verification/reset_password_screen.dart';
 
 import '../../components/constrains.dart';
-import '../../Widget/getOtpWidget.dart';
 
-class OtpCodeScreen extends StatefulWidget {
-  const OtpCodeScreen({super.key});
 
-  @override
-  State<OtpCodeScreen> createState() => _OtpCodeScreenState();
-}
-
-class _OtpCodeScreenState extends State<OtpCodeScreen> {
-
-  final TextEditingController otpCtrl = TextEditingController();
+class OtpVerification extends StatelessWidget {
+  const OtpVerification({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+
       home: Scaffold(
 
         body: Padding(
-          padding: EdgeInsets.symmetric(vertical: 40,horizontal: 10),
+          padding: EdgeInsets.symmetric(horizontal: 10,vertical: 40),
           child: Column(
             children: [
-              //First Row For Verify And Back Arrow
+              //First Row For Back Arrow And Forgot Password
               Row(
-
                 children: [
+                  //TODO For Circular Box
                   InkWell(
                     onTap: () {
                       // Navigate To Previous Screen
@@ -48,28 +42,71 @@ class _OtpCodeScreenState extends State<OtpCodeScreen> {
                       ),
                     ),
                   ),
+
                   SizedBox(
-                    width: 30,
+                    width: 20,
                   ),
                   Text(
-                    'Verify',
+                    'Verify Your Email',
                     style: kLogInTextStyle,
                   ),
                 ],
               ),
 
               SizedBox(
-                height: 70,
+                height: 20,
               ),
 
-              Text('Code has been Send to abc@gmail.com',style: kRandomTextStyle,),
+              //Random Text
+              Text(
+                'Verify Your Identity',
+                style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+
+              Text(
+                "For your security, verify the code sent to your registered contact. Let’s confirm it’s you!",
+                style: TextStyle(
+                  fontFamily: 'Roboto',
+                  fontSize: 13,
+                ),
+                textAlign: TextAlign.center,
+              ),
+
+              SizedBox(height: 20,),
+
+              //Get Otp Widget
+              getOtp(),
 
               SizedBox(
                 height: 20,
               ),
 
-             //TODO SignUp OTP Code Widget
-              getOtp(),
+              //Navigate To Otp Reset Password Screen
+              GestureDetector(
+                onTap: (){
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => ResetPasswordScreen()));
+                },
+                child: Container(
+                  height: 50,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Color(0XFF007FF5),
+                    borderRadius: BorderRadius.circular(25), // Rounded corners
+                  ),
+                  child: Center(child: Text('Confirm'
+                      ,style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700
+                  ),)),
+                ),
+              ),
 
               SizedBox(height: 30,),
 
@@ -103,61 +140,11 @@ class _OtpCodeScreenState extends State<OtpCodeScreen> {
                   ),),
                 ],
               ),
-
-              SizedBox(height: 30,),
-              //Button
-              GestureDetector(
-                onTap: (){
-                  //TODO
-                },
-                child: Container(
-                  height: 50,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Color(0XFF007FF5),
-                    borderRadius: BorderRadius.circular(25), // Rounded corners
-                  ),
-                  child: Center(child: Text('Verify Code',style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700
-                  ),)),
-                ),
-              ),
             ],
           ),
         ),
+
       ),
     );
   }
-  // Widget signUpOtpCode() {
-  //
-  //   return Column(
-  //     crossAxisAlignment: CrossAxisAlignment.start,
-  //     children: [
-  //       PinCodeTextField(
-  //         controller: otpCtrl,
-  //         length: 4,
-  //         animationType: AnimationType.fade,
-  //         keyboardType: TextInputType.number,
-  //         pinTheme: PinTheme(
-  //             borderWidth: 0.2,
-  //             shape: PinCodeFieldShape.box,
-  //             borderRadius: BorderRadius.circular(5),
-  //             inactiveColor: Colors.grey, // Border color when not filled
-  //             fieldHeight: 70,
-  //             fieldWidth: 70,
-  //             activeFillColor: Colors.white,
-  //             inactiveFillColor: Colors.white,
-  //             selectedFillColor: Colors.white),
-  //         animationDuration: const Duration(milliseconds: 300),
-  //         backgroundColor: Colors.transparent,
-  //         enableActiveFill: true,
-  //         appContext: context,
-  //       ),
-  //     ],
-  //   );
-  // }
-
 }
-
