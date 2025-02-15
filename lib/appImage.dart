@@ -9,4 +9,6 @@ class AppImage{
   static const profileImg="assets/images/profileImg.png";
   static const trainerImg="assets/images/trainerImg.png";
   static const starIcon="assets/images/starIcon.png";
+  static const searchIcon2="assets/images/searchIcon2.png";
+  static const filterIcon="assets/images/filterIcon.png";
 }
