@@ -65,6 +65,7 @@ class _ExampleState extends State<UiDesign> {
               )
             ],
           ),
+
           child: SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
@@ -79,6 +80,8 @@ class _ExampleState extends State<UiDesign> {
                 tabBackgroundColor: Color(0XFF305FA1),  //0XFF305FA1
                 color: Colors.black,
                 tabs: [
+
+                  //Home Screen
                   GButton(
                     icon: Icons.circle, // Placeholder to satisfy the required parameter
                     leading: Image.asset(AppImage.homeIcon, // Path to your asset image
@@ -87,6 +90,8 @@ class _ExampleState extends State<UiDesign> {
                     ),
                     text: 'Home',
                   ),
+
+                  //Search Screen
                   GButton(
                     icon: Icons.circle, // Placeholder to satisfy the required parameter
                     leading: Image.asset(AppImage.searchIcon, // Path to your asset image
@@ -95,6 +100,7 @@ class _ExampleState extends State<UiDesign> {
                     ),
                     text: 'Search',
                   ),
+                  //Booking Screen
                   GButton(
                     icon: Icons.circle, // Placeholder to satisfy the required parameter
                     leading: Image.asset(AppImage.orderIcon, // Path to your asset image
@@ -103,6 +109,8 @@ class _ExampleState extends State<UiDesign> {
                     ),
                     text: 'Booking',
                   ),
+
+                  //Profile Screen
                   GButton(
                     icon: Icons.circle, // Placeholder to satisfy the required parameter
                     leading: Image.asset(AppImage.profileIcon, // Path to your asset image
@@ -112,6 +120,8 @@ class _ExampleState extends State<UiDesign> {
                     text: 'Profile',
                   ),
                 ],
+
+
                 selectedIndex: _selectedIndex,
                 onTabChange: (index) {
                   setState(() {

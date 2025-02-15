@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import '../appImage.dart';
 
 class SingleChildContainer extends StatelessWidget {
-  const SingleChildContainer({
-    super.key,
-  });
+  double height;
+  double width;
+  SingleChildContainer({required this.height,required this.width});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 300,
       width: 295,
-      //Decoration
+      //Decoration For Container
       decoration: BoxDecoration(
         //border: OutlineInputBorder()
         borderRadius: BorderRadius.circular(20),
@@ -24,6 +24,7 @@ class SingleChildContainer extends StatelessWidget {
           fit: BoxFit.cover, // Adjust image size
         ),
       ),
+
 
       child: Container(
         decoration: BoxDecoration(
@@ -181,6 +182,7 @@ class SingleChildContainer extends StatelessWidget {
               //Bottom Row
               //For Align Bottom
               Spacer(),
+
               Padding(
                 padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
                 child: Row(
@@ -188,11 +190,8 @@ class SingleChildContainer extends StatelessWidget {
                   children: [
                     //First Container
                     Container(
-                      // padding: EdgeInsets.all(10),
-                      // Padding inside the circle
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        // color: Colors.grey[350], // Background color
                       ),
                       child: Image.asset(AppImage.location,scale: 3,)
                     ),
