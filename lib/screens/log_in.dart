@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pickball/components/constrains.dart';
-import 'package:pickball/screens/home_screen.dart';
+import 'package:pickball/screens/ui/home_screen.dart';
 import 'package:pickball/screens/login_verification/forgot_password_screen.dart';
 import 'package:pickball/screens/sign_up.dart';
+import 'package:pickball/screens/ui/ui_design.dart';
 
 class LogInScreen extends StatefulWidget {
   const LogInScreen({super.key});
@@ -212,7 +213,7 @@ class _LogInScreenState extends State<LogInScreen> {
               //Log In Button
               GestureDetector(
                 onTap: (){
-                 Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                 Navigator.push(context, MaterialPageRoute(builder: (context) => UiDesign()));
                 },
                 child: Container(
                   height: 50,
