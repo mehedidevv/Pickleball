@@ -112,6 +112,7 @@ class _SearchScreenState extends State<SearchScreen> {
               ),
             ),
 
+            //Applying Stack Method
             Expanded(
               child: Stack(
                 children: [

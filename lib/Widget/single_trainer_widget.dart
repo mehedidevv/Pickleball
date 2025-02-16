@@ -43,7 +43,7 @@ class TrainerWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                //Load Icon
+                //Load Star Icon
                 SizedBox(
                   height: 30,
                   width: 30,
@@ -53,7 +53,7 @@ class TrainerWidget extends StatelessWidget {
                 ),
 
                 SizedBox(width: 10,),
-
+                //Rating
                 Text('4.5',style: TextStyle(
                     fontSize: 14,
                     fontFamily: 'Roboto',
@@ -63,7 +63,7 @@ class TrainerWidget extends StatelessWidget {
                 ),),
               ],
             ),
-
+            //Pricing Text
             Text("10+ Years  \$50/hour ",style: TextStyle(
               fontSize: 14,
               fontFamily: 'Roboto',
@@ -76,7 +76,7 @@ class TrainerWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-
+                //View Details Text
                 Text('View Details',style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'Roboto',
@@ -86,6 +86,7 @@ class TrainerWidget extends StatelessWidget {
 
                 ),),
                 SizedBox(width: 20,),
+                //Forward Arrow
                 Container(
                   padding: EdgeInsets.all(5),
                   // Padding inside the circle

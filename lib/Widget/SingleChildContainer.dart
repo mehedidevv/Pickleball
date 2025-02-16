@@ -41,25 +41,34 @@ class SingleChildContainer extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    'Doubles Strategy Masterclass',
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'Roboto',
-                        fontWeight: FontWeight.w700,
-                        color: Color(0XFFFFFFFF)),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(10),
-                    // Padding inside the circle
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.grey[350], // Background color
+                  
+                  Expanded(
+                    child: Text(
+                      'Doubles Strategy Masterclass',
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.w700,
+                          color: Color(0XFFFFFFFF)),
                     ),
-                    child: Icon(
-                      Icons.star_border, // Left arrow icon
-                      color: Colors.black, // Icon color
-                      size: 20, // Icon size
+                  ),
+                  Expanded(
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: Container(
+                        padding: EdgeInsets.all(10),
+                        // Padding inside the circle
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.grey[350], // Background color
+                        ),
+                        child: Icon(
+                          Icons.star_border, // Left arrow icon
+                          color: Colors.black, // Icon color
+                          size: 20, // Icon size
+                        ),
+
+                      ),
                     ),
                   ),
                 ],
@@ -183,21 +192,26 @@ class SingleChildContainer extends StatelessWidget {
               //For Align Bottom
               Spacer(),
 
-              Padding(
-                padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    //First Container
-                    Container(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  //Location Icon
+                  Expanded(
+                    flex: 1,
+                    child: Container(
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: Image.asset(AppImage.location,scale: 3,)
                     ),
+                  ),
 
-                    Padding(
+                  //Sunset Pickle Ball
+                  Expanded(
+                    flex: 6,
+                    child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 2),
+                      //Sunset Pickle Ball
                       child: Column(
                         children: [
                           Text(
@@ -219,9 +233,14 @@ class SingleChildContainer extends StatelessWidget {
                         ],
                       ),
                     ),
+                  ),
 
-                    Padding(
+                  //View Details Text
+                  Expanded(
+                    flex: 3,
+                    child: Padding(
                         padding: EdgeInsets.symmetric(horizontal: 2),
+                        //View Details Text
                         child: Text(
                           'View Details',
                           style: TextStyle(
@@ -231,9 +250,12 @@ class SingleChildContainer extends StatelessWidget {
                             color: Color(0XFFFFFFFF),
                           ),
                         )),
+                  ),
 
-                    //Forward Arrow Icon
-                    InkWell(
+                  //Forward Arrow Icon
+                  Expanded(
+                    flex: 2,
+                    child: InkWell(
                       onTap: () {
                         // Navigate To Previous Screen
                         // Navigator.pop(context);
@@ -254,8 +276,8 @@ class SingleChildContainer extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ],
           ),

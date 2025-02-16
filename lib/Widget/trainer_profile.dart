@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../appImage.dart';
 
-
 //Trainer Profile Container Widget
 class TrainerProfile_Widget extends StatelessWidget {
   const TrainerProfile_Widget({
