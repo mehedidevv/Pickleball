@@ -11,4 +11,11 @@ class AppImage{
   static const starIcon="assets/images/starIcon.png";
   static const searchIcon2="assets/images/searchIcon2.png";
   static const filterIcon="assets/images/filterIcon.png";
+  static const starWhiteIcon="assets/images/starWhiteIcon.png";
+  static const arrowBackIcon="assets/images/arrowBackIcon.png";
+  static const bookNowBtn="assets/images/bookNowBtn.png";
+  static const callIcon="assets/images/callTrainer.png";
+  static const messageIcon="assets/images/messageIcon.png";
+
+
 }

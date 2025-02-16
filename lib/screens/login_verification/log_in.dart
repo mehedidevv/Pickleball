@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pickball/components/constrains.dart';
 import 'package:pickball/screens/ui/home_screen.dart';
 import 'package:pickball/screens/login_verification/forgot_password_screen.dart';
-import 'package:pickball/screens/sign_up.dart';
+import 'package:pickball/screens/signup_verification/sign_up.dart';
 import 'package:pickball/screens/ui/ui_design.dart';
 
 class LogInScreen extends StatefulWidget {
@@ -17,25 +17,6 @@ class _LogInScreenState extends State<LogInScreen> {
   bool _isObscure = true;
   bool isChecked = false;
 
-  //TODO Text Editing Controller
-  // final TextEditingController _emailController = TextEditingController();
-  // final TextEditingController _passwordController = TextEditingController();
-  //
-  //
-  // //TODO Method For Log In
-  // void _login()  {
-  //   final String email = _emailController.text.toString();
-  //   final String password = _passwordController.text.toString();
-  //
-  //   if (email.isEmpty || password.isEmpty) {
-  //     // Show an error message if fields are empty
-  //     ScaffoldMessenger.of(context).showSnackBar(
-  //       SnackBar(content: Text('Please Enter Your email and password')),);
-  //   } else{
-  //      Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
-  //   }
-  // }
-
 
     @override
   Widget build(BuildContext context) {
@@ -43,37 +24,14 @@ class _LogInScreenState extends State<LogInScreen> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               //Implement Fist Row
               Row(
                 children: [
-                  // //TODO For Circular Box
-                  // InkWell(
-                  //   onTap: () {
-                  //     // Navigate To Previous Screen
-                  //     // Navigator.pop(context);
-                  //   },
-                  //   borderRadius: BorderRadius.circular(20), // Circular shape
-                  //   child: Container(
-                  //     padding: EdgeInsets.all(10), // Padding inside the circle
-                  //     decoration: BoxDecoration(
-                  //       shape: BoxShape.circle,
-                  //       color: Colors.grey[200], // Background color
-                  //     ),
-                  //     child: Icon(
-                  //       Icons.arrow_back, // Left arrow icon
-                  //       color: Colors.black, // Icon color
-                  //       size: 24, // Icon size
-                  //     ),
-                  //   ),
-                  // ),
-                  //
-                  // SizedBox(
-                  //   width: 20,
-                  // ),
+
                   Text(
                     'Log In',
                     style: kLogInTextStyle,
@@ -82,7 +40,7 @@ class _LogInScreenState extends State<LogInScreen> {
               ),
 
               SizedBox(
-                height: 40,
+                height: 30,
               ),
 
               //Welcome Text
@@ -103,7 +61,7 @@ class _LogInScreenState extends State<LogInScreen> {
               ),),
 
               SizedBox(
-                height: 40,
+                height: 30,
               ),
 
               Text(
@@ -116,7 +74,7 @@ class _LogInScreenState extends State<LogInScreen> {
 
               //TextField For Email
               TextField(
-                //controller: _emailController,
+
                 decoration: kInputDecoration.copyWith(
                     prefixIcon: Icon(Icons.email_outlined),
                     hintText: 'Enter Your Mail',
@@ -124,7 +82,7 @@ class _LogInScreenState extends State<LogInScreen> {
               ),
 
               SizedBox(
-                height: 30,
+                height: 25,
               ),
 
               Text(

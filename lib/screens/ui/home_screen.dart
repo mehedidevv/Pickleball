@@ -5,7 +5,7 @@ import 'package:pickball/screens/ui/profail_screen.dart';
 import 'package:pickball/screens/ui/search_screen.dart';
 
 import '../../Widget/SingleChildContainer.dart';
-import '../../Widget/trainer_widget.dart';
+import '../../Widget/single_trainer_widget.dart';
 import '../../components/constrains.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
             children: [
                Padding(
-                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -145,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
 
                     SizedBox(
-                      height: 20,
+                      height: 10,
                     ),
 
                     //For Recommended And See More
@@ -210,6 +210,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
 
+                    //Recommender And See More Text
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
                       child: Row(
@@ -255,7 +256,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           //Container For Trainer Profile
                           TrainerWidget(),
+                          SizedBox(width: 10,),
                           TrainerWidget(),
+                          SizedBox(width: 10,),
+                          TrainerWidget(),
+                          SizedBox(width: 10,),
                           TrainerWidget(),
                         ],
                       ),

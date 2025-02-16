@@ -21,7 +21,7 @@ class TrainerWidget extends StatelessWidget {
       ),
 
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
+        padding: EdgeInsets.only(right: 10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -31,7 +31,7 @@ class TrainerWidget extends StatelessWidget {
               radius: 40,
               backgroundImage: AssetImage(AppImage.trainerImg),
             ),
-
+            //Name Text
             Text('John Smith',style: TextStyle(
                 fontSize: 16,
                 fontFamily: 'Roboto',
@@ -42,9 +42,8 @@ class TrainerWidget extends StatelessWidget {
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-
+                //Load Icon
                 SizedBox(
                   height: 30,
                   width: 30,

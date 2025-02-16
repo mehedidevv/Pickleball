@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pickball/screens/signup_verification/verify_screen.dart';
 
-import '../components/constrains.dart';
+import '../../components/constrains.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -12,44 +12,47 @@ class SignUpScreen extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+          padding: EdgeInsets.symmetric(horizontal: 20,),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               //Implement Fist Row
-              Row(
-                children: [
-                  InkWell(
-                    onTap: () {
-                      // Navigate To Previous Screen
-                      Navigator.pop(context);
-                    },
-                    borderRadius: BorderRadius.circular(20), // Circular shape
-                    child: Container(
-                      padding: EdgeInsets.all(10), // Padding inside the circle
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.grey[200], // Background color
-                      ),
-                      child: Icon(
-                        Icons.arrow_back, // Left arrow icon
-                        color: Colors.black, // Icon color
-                        size: 24, // Icon size
+              Padding(
+                padding: EdgeInsets.only(top: 30),
+                child: Row(
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        // Navigate To Previous Screen
+                        Navigator.pop(context);
+                      },
+                      borderRadius: BorderRadius.circular(20), // Circular shape
+                      child: Container(
+                        padding: EdgeInsets.all(10), // Padding inside the circle
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.grey[200], // Background color
+                        ),
+                        child: Icon(
+                          Icons.arrow_back, // Left arrow icon
+                          color: Colors.black, // Icon color
+                          size: 24, // Icon size
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 30,
-                  ),
-                  Text(
-                    'Create Account',
-                    style: kLogInTextStyle,
-                  ),
-                ],
+                    SizedBox(
+                      width: 30,
+                    ),
+                    Text(
+                      'Create Account',
+                      style: kLogInTextStyle,
+                    ),
+                  ],
+                ),
               ),
 
               SizedBox(
-                height: 80,
+                height: 60,
               ),
 
               //For UserName
@@ -125,18 +128,6 @@ class SignUpScreen extends StatelessWidget {
                 height: 20,
               ),
 
-              // Align(
-              //   alignment: Alignment.topRight,
-              //   child: Text(
-              //     'Forgot the Password?',
-              //     style: TextStyle(
-              //         fontSize: 16,
-              //         fontWeight: FontWeight.w500,
-              //         color: Colors.black,
-              //         fontFamily: 'Roboto'
-              //     ),
-              //   ),
-              // ),
 
               SizedBox(
                 height: 20,

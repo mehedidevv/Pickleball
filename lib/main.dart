@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pickball/screens/log_in.dart';
+import 'package:pickball/screens/login_verification/log_in.dart';
 
 void main() {
   runApp(MyApp());
