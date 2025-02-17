@@ -5,7 +5,9 @@ import '../appImage.dart';
 class SingleChildContainer extends StatelessWidget {
   double height;
   double width;
-  SingleChildContainer({required this.height,required this.width});
+  final VoidCallback? onpressed;
+
+  SingleChildContainer({required this.height,required this.width,  this.onpressed});
 
   @override
   Widget build(BuildContext context) {

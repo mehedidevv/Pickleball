@@ -11,6 +11,7 @@ class descriptionForTrainer extends StatelessWidget {
       width: double.infinity,
       child: Padding(
         padding: EdgeInsets.only(left: 10),
+
         child: ListView(
           children: [
             Column(

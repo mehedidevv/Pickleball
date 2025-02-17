@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:pickball/appImage.dart';
-import 'package:pickball/screens/ui/profail_screen.dart';
-import 'package:pickball/screens/ui/search_screen.dart';
+//import 'package:pickball/screens/ui/booking_scrteens/profile_screen/profail_screen.dart';
+//import 'package:pickball/screens/ui/profile_screen/profail_screen.dart';
+import 'package:pickball/screens/ui/search_screens/search_screen.dart';
 
-import 'booking_screen.dart';
+import 'booking_scrteens/booking_screen.dart';
+import 'booking_scrteens/profile_screen/profail_screen.dart';
 import 'home_screen.dart';
 
 void main() => runApp(MaterialApp(

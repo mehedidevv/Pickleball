@@ -16,6 +16,17 @@ class AppImage{
   static const bookNowBtn="assets/images/bookNowBtn.png";
   static const callIcon="assets/images/callTrainer.png";
   static const messageIcon="assets/images/messageIcon.png";
+  static const dateIcon="assets/images/dateIcon.png";
+  static const clockIcon="assets/images/clockIcon.png";
+  static const volumeIcon="assets/images/volumeIcon.png";
+  static const addIcon="assets/images/addIcon.png";
+  static const logoAxisBank="assets/images/logoAxisBank.png";
+  static const visaBank="assets/images/visaBank.png";
+  static const paymentSuccess="assets/images/paymentSuccess.png";
+  static const close="assets/images/Close.png";
+  static const downloadIcon="assets/images/downloadIcon.png";
+  static const timerIcon="assets/images/timerIcon.png";
+  static const saveChangesBtn="assets/images/saveChangesBtn.png";
 
 
 }

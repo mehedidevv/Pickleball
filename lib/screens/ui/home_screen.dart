@@ -1,12 +1,18 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:pickball/appImage.dart';
-import 'package:pickball/screens/ui/booking_screen.dart';
-import 'package:pickball/screens/ui/profail_screen.dart';
-import 'package:pickball/screens/ui/search_screen.dart';
+import 'package:pickball/screens/notification_screen.dart';
+import 'package:pickball/screens/ui/booking_scrteens/booking_screen.dart';
+//import 'package:pickball/screens/ui/booking_scrteens/profile_screen/profail_screen.dart';
+//import 'package:pickball/screens/ui/profile_screen/profail_screen.dart';
+import 'package:pickball/screens/ui/search_screens/search_screen.dart';
 
 import '../../Widget/SingleChildContainer.dart';
 import '../../Widget/single_trainer_widget.dart';
 import '../../components/constrains.dart';
+import 'booking_scrteens/profile_screen/profail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -50,12 +56,29 @@ class _HomeScreenState extends State<HomeScreen> {
                             //TODO For Circular Box
                             Container(
                               padding: EdgeInsets.all(10),
+
                               child:  Container(
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     // Background color
                                   ),
-                                  child: Image.asset(AppImage.profileImg,scale: 3,)
+                                  child: GestureDetector(
+                                    onTap: (){
+                                      //TODO
+                                      Navigator.push(context, MaterialPageRoute(builder: (context) => ProfailScreen()));
+                                    },
+
+                                     // child: Image.asset(AppImage.profileImg,scale: 3,),
+
+                                   child:  CircleAvatar(
+                                      radius: 50, // The radius of the circle
+                                     backgroundImage: AssetImage(AppImage.profileImg),
+                                         
+                                    ),
+
+                                  )
+
+
                               ),
                             ),
 
@@ -73,8 +96,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         InkWell(
                           onTap: () {
-                            // Navigate To Previous Screen
-                            // Navigator.pop(context);
+                            // Navigate TO Notification Screen
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationScreen()));
                           },
 
                           borderRadius: BorderRadius.circular(20), // Circular shape
@@ -172,11 +195,17 @@ class _HomeScreenState extends State<HomeScreen> {
                                 color: Color(0XFF305FA1),
                               ),
                             ),
+                            SizedBox(width: 10,),
                             SizedBox(
-                              child: Icon(
-                                Icons.arrow_forward, // Left arrow icon
-                                color: Color(0XFF305FA1), // Icon color
-                                size: 20, // Icon size
+                              child: GestureDetector(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => SearchScreen()));
+                                },
+                                child: Icon(
+                                  Icons.arrow_forward, // Left arrow icon
+                                  color: Color(0XFF305FA1), // Icon color
+                                  size: 20, // Icon size
+                                ),
                               ),
                             )
                           ],
@@ -194,9 +223,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           //SingleChild Container
                           SingleChildContainer(height: 320,width: 300,),
+
                           SizedBox(
                             width: 10,
                           ),
+
                           SingleChildContainer(height: 320,width: 200,),
 
                           SizedBox(

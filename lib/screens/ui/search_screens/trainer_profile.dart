@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../Widget/trainer_widget/description_trainer_widget.dart';
-import '../Widget/trainer_widget/reviewfor_trainer_widget.dart';
-import '../Widget/trainer_profile.dart';
-import '../appImage.dart';
+import '../../../Widget/trainer_profile.dart';
+import '../../../Widget/trainer_widget/description_trainer_widget.dart';
+import '../../../Widget/trainer_widget/reviewfor_trainer_widget.dart';
+// import '../Widget/trainer_widget/description_trainer_widget.dart';
+// import '../Widget/trainer_widget/reviewfor_trainer_widget.dart';
+// import '../Widget/trainer_profile.dart';
+// import '../appImage.dart';
 
 
 class TrainerProfile extends StatefulWidget {

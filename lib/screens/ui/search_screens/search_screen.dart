@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:pickball/Widget/SingleChildContainer.dart';
 import 'package:pickball/appImage.dart';
-import 'package:pickball/screens/session_screen.dart';
-import 'package:pickball/screens/trainer_profile.dart';
+import 'package:pickball/screens/ui/search_screens/session_screen.dart';
+import 'package:pickball/screens/ui/search_screens/trainer_profile.dart';
+// import 'package:pickball/search_screens/session_screen.dart';
+// import 'package:pickball/search_screens/trainer_profile.dart';
 
-import '../../components/constrains.dart';
+import '../../../components/constrains.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});

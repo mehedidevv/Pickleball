@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:pickball/screens/ui/search_screen.dart';
+import 'package:pickball/screens/ui/booking_scrteens/booking_confirmation_screen.dart';
+import 'package:pickball/screens/ui/search_screens/search_screen.dart';
 
-import '../Widget/sessions_widget/description_widget.dart';
-import '../Widget/sessions_widget/review_widget.dart';
-import '../appImage.dart';
+import '../../../Widget/sessions_widget/description_widget.dart';
+import '../../../Widget/sessions_widget/review_widget.dart';
+import '../../../appImage.dart';
+// import '../Widget/sessions_widget/description_widget.dart';
+// import '../Widget/sessions_widget/review_widget.dart';
+// import '../appImage.dart';
 
 class SessionScreen extends StatefulWidget {
   const SessionScreen({super.key});
@@ -25,7 +29,7 @@ class _SessionScreenState extends State<SessionScreen> {
 
           //First Container Add Background Image
           Container(
-              height: 300,
+              height: 250,
               width: double.infinity,
               //Decoration For Container
               decoration: BoxDecoration(
@@ -127,14 +131,14 @@ class _SessionScreenState extends State<SessionScreen> {
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white, backgroundColor: Color(0XFF305FA1), // Text color
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20), // Rounded corners
+                    borderRadius: BorderRadius.circular(12), // Rounded corners
                   ),
-                  padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24), // Padding for button
+                  padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10), // Padding for button
                 ),
                 //On Pressed Function
                 onPressed: () {
-                  //TODO Add the onPressed action here
-                  print('Book Now pressed');
+                  //TODO Navigate to Booking Confirmation Screen
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => BookingConfirmationScreen()));
                 },
 
                 child: Row(
