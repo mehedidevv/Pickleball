@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pickball/screens/login_verification/log_in.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../../components/constrains.dart';
@@ -109,12 +110,19 @@ class _OtpCodeScreenState extends State<OtpCodeScreen> {
               GestureDetector(
                 onTap: (){
                   //TODO
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => LogInScreen()));
                 },
                 child: Container(
                   height: 50,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0XFF007FF5),
+
+                    //Applying Linear Color
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [Color(0XFF007FF5), Color(0XFF003A71)],
+                    ),
                     borderRadius: BorderRadius.circular(25), // Rounded corners
                   ),
                   child: Center(child: Text('Verify Code',style: TextStyle(
@@ -130,34 +138,6 @@ class _OtpCodeScreenState extends State<OtpCodeScreen> {
       ),
     );
   }
-  // Widget signUpOtpCode() {
-  //
-  //   return Column(
-  //     crossAxisAlignment: CrossAxisAlignment.start,
-  //     children: [
-  //       PinCodeTextField(
-  //         controller: otpCtrl,
-  //         length: 4,
-  //         animationType: AnimationType.fade,
-  //         keyboardType: TextInputType.number,
-  //         pinTheme: PinTheme(
-  //             borderWidth: 0.2,
-  //             shape: PinCodeFieldShape.box,
-  //             borderRadius: BorderRadius.circular(5),
-  //             inactiveColor: Colors.grey, // Border color when not filled
-  //             fieldHeight: 70,
-  //             fieldWidth: 70,
-  //             activeFillColor: Colors.white,
-  //             inactiveFillColor: Colors.white,
-  //             selectedFillColor: Colors.white),
-  //         animationDuration: const Duration(milliseconds: 300),
-  //         backgroundColor: Colors.transparent,
-  //         enableActiveFill: true,
-  //         appContext: context,
-  //       ),
-  //     ],
-  //   );
-  // }
 
 }
 

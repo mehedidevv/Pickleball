@@ -282,11 +282,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
                               SizedBox(width: 10,),
 
-                              SizedBox(
-                                child: Icon(
-                                  Icons.arrow_forward,
-                                  color: Color(0XFF305FA1),
+                              GestureDetector(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => SearchScreen()));
+                                },
+                                child: SizedBox(
+                                  child: Icon(
+                                    Icons.arrow_forward,
+                                    color: Color(0XFF305FA1),
 
+                                  ),
                                 ),
                               ),
                             ],

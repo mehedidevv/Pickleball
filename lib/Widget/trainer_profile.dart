@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pickball/Widget/single_trainer_widget.dart';
+import 'package:pickball/screens/ui/search_screens/search_screen.dart';
 
 import '../appImage.dart';
 
@@ -29,10 +31,12 @@ class TrainerProfile_Widget extends StatelessWidget {
             //Implementing First Row
             child: Row(
               children: [
+
                 //Arrow Back Icon
                 GestureDetector(
                   onTap: (){
-                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => SearchScreen()));
+                    //print('Hello');
                   },
                   child: Container(
                     padding: EdgeInsets.all(10), // Padding inside the circle
@@ -47,6 +51,8 @@ class TrainerProfile_Widget extends StatelessWidget {
                     ),
                   ),
                 ),
+
+
                 //Trainer Profile Text
                 Padding(
                   padding: EdgeInsets.only(left: 20),
@@ -106,11 +112,8 @@ class TrainerProfile_Widget extends StatelessWidget {
 
 
 
-
-
                 ],
               )
-
 
             ],
           ),
@@ -230,7 +233,6 @@ class TrainerProfile_Widget extends StatelessWidget {
               ],
             ),
           )
-
 
         ],
       ),

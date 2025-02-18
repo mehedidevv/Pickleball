@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pickball/screens/ui/search_screens/sessions/session_screen.dart';
+import 'package:pickball/screens/ui/search_screens/trainer/trainer_profile.dart';
 import 'package:pickball/screens/ui/search_screens/trainer/trainer_widget/description_trainer_widget.dart';
 
 import '../appImage.dart';
@@ -14,7 +15,7 @@ class TrainerWidget extends StatelessWidget {
 
     return GestureDetector(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => SessionScreen()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => TrainerProfile()));
       },
       child: Container(
         height: 230,

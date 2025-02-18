@@ -172,7 +172,13 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   height: 50,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0XFF007FF5),
+
+                    //Applying Linear Color
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [Color(0XFF007FF5), Color(0XFF003A71)],
+                    ),
                     borderRadius: BorderRadius.circular(25), // Rounded corners
                   ),
                   child: Center(

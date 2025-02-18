@@ -113,13 +113,13 @@ class SignUpScreen extends StatelessWidget {
               ),
 
               Text(
-                'Password',
+                'Confirm Password',
                 style: kPasswordTextStyle,
               ),
               TextField(
                 decoration: kInputDecoration.copyWith(
                   //  suffixIcon: Icon(Icons.remove_red_eye),
-                    hintText: 'Enter Your Password',
+                    hintText: 'Confirm Password',
                     labelText: 'Confirm Password'),
                 obscureText: true,
               ),
@@ -132,7 +132,7 @@ class SignUpScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-
+              //Continue Button
               GestureDetector(
                 onTap: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context) => VerifyScreen()));
@@ -141,7 +141,13 @@ class SignUpScreen extends StatelessWidget {
                   height: 50,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0XFF007FF5),
+
+                    //Applying Linear Color
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [Color(0XFF007FF5), Color(0XFF003A71)],
+                    ),
                     borderRadius: BorderRadius.circular(25), // Rounded corners
                   ),
                   child: Center(child: Text('Continue',style: TextStyle(
@@ -152,38 +158,6 @@ class SignUpScreen extends StatelessWidget {
                 ),
               ),
 
-              // SizedBox(
-              //   height: 30,
-              // ),
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.center,
-              //   children: [
-              //     Text(
-              //       "Already Have Account?",
-              //       style: TextStyle(fontSize: 16,
-              //           fontFamily: 'Roboto',
-              //           color: Colors.black),
-              //     ),
-              //     SizedBox(
-              //       width: 10,
-              //     ),
-              //     //Sign Up Widget
-              //     GestureDetector(
-              //       onDoubleTap: (){
-              //         //TODO
-              //         Navigator.pop(context);
-              //       },
-              //       child: Text(
-              //         'Sign In',
-              //         style: TextStyle(
-              //             fontSize: 16,
-              //             fontWeight: FontWeight.w700,
-              //             fontFamily: 'Roboto',
-              //             color: Colors.black),
-              //       ),
-              //     ),
-              //   ],
-              // )
             ],
           ),
         ),

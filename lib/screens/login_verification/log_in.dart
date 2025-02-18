@@ -25,6 +25,7 @@ class _LogInScreenState extends State<LogInScreen> {
       home: Scaffold(
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
+
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -177,7 +178,15 @@ class _LogInScreenState extends State<LogInScreen> {
                   height: 50,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0XFF007FF5),
+
+                    //Applying Linear Color
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [Color(0XFF007FF5), Color(0XFF003A71)],
+                    ),
+
+                    //color: Color(0XFF007FF5),
                     borderRadius: BorderRadius.circular(25), // Rounded corners
                   ),
                   child: Center(
@@ -195,6 +204,7 @@ class _LogInScreenState extends State<LogInScreen> {
                 height: 20,
               ),
 
+              //Text For Don't Have Account Sign Up
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
