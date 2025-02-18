@@ -49,3 +49,15 @@ const kOtpTextStyle=TextStyle(
     color: Colors.black,
     fontFamily: 'Urbanist'
 );
+
+//Booking Notification
+//Text Style For Password Text Field
+const kBookingNotification=TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    color: Colors.black,
+    fontFamily: 'Roboto'
+);
+
+
+

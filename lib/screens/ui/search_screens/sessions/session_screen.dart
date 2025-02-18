@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:pickball/screens/ui/booking_scrteens/booking_confirmation_screen.dart';
+import 'package:pickball/screens/ui/book_now/booking_confirmation_screen.dart';
 import 'package:pickball/screens/ui/search_screens/search_screen.dart';
+import 'package:pickball/screens/ui/search_screens/sessions/sessions_widget/description_widget.dart';
+import 'package:pickball/screens/ui/search_screens/sessions/sessions_widget/review_widget.dart';
 
-import '../../../Widget/sessions_widget/description_widget.dart';
-import '../../../Widget/sessions_widget/review_widget.dart';
-import '../../../appImage.dart';
+import '../../../../appImage.dart';
+
+//import '../../../../Widget/sessions_widget/description_widget.dart';
+//import '../../../../Widget/sessions_widget/review_widget.dart';
+//import '../../../../appImage.dart';
 // import '../Widget/sessions_widget/description_widget.dart';
 // import '../Widget/sessions_widget/review_widget.dart';
 // import '../appImage.dart';

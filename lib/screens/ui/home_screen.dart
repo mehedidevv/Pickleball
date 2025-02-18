@@ -5,6 +5,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:pickball/appImage.dart';
 import 'package:pickball/screens/notification_screen.dart';
 import 'package:pickball/screens/ui/booking_scrteens/booking_screen.dart';
+import 'package:pickball/screens/ui/profile_screen/profail_screen.dart';
 //import 'package:pickball/screens/ui/booking_scrteens/profile_screen/profail_screen.dart';
 //import 'package:pickball/screens/ui/profile_screen/profail_screen.dart';
 import 'package:pickball/screens/ui/search_screens/search_screen.dart';
@@ -12,7 +13,7 @@ import 'package:pickball/screens/ui/search_screens/search_screen.dart';
 import '../../Widget/SingleChildContainer.dart';
 import '../../Widget/single_trainer_widget.dart';
 import '../../components/constrains.dart';
-import 'booking_scrteens/profile_screen/profail_screen.dart';
+//import 'booking_scrteens/profile_screen/profail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -123,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
 
                     SizedBox(
-                      height: 15,
+                      height: 10,
                     ),
                     //Implementing Second Container
                     Container(
@@ -237,6 +238,20 @@ class _HomeScreenState extends State<HomeScreen> {
                           SizedBox(
                             width: 10,
                           ),
+                          //SingleChild Container
+                          SingleChildContainer(height: 320,width: 300,),
+
+                          SizedBox(
+                            width: 10,
+                          ),
+
+                          SingleChildContainer(height: 320,width: 200,),
+
+                          SizedBox(
+                            width: 10,
+                          ),
+                          SingleChildContainer(height: 320,width: 300,),
+
                         ],
                       ),
                     ),
@@ -286,6 +301,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Row(
                         children: [
                           //Container For Trainer Profile
+                          TrainerWidget(),
+                          SizedBox(width: 10,),
+                          TrainerWidget(),
+                          SizedBox(width: 10,),
                           TrainerWidget(),
                           SizedBox(width: 10,),
                           TrainerWidget(),

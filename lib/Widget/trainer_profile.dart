@@ -30,16 +30,16 @@ class TrainerProfile_Widget extends StatelessWidget {
             child: Row(
               children: [
                 //Arrow Back Icon
-                Container(
-                  padding: EdgeInsets.all(10), // Padding inside the circle
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.grey[200], // Background color
-                  ),
-                  child: GestureDetector(
-                    onTap: (){
-                      Navigator.pop(context);
-                    },
+                GestureDetector(
+                  onTap: (){
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(10), // Padding inside the circle
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.grey[200], // Background color
+                    ),
                     child: Icon(
                       Icons.arrow_back, // Left arrow icon
                       color: Colors.black, // Icon color

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pickball/appImage.dart';
-import 'package:pickball/screens/ui/booking_scrteens/payment_details.dart';
+import 'package:pickball/screens/ui/book_now/payment_details.dart';
 
 class PaymentConfirmation extends StatelessWidget {
   const PaymentConfirmation({super.key});

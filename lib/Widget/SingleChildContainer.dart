@@ -35,8 +35,9 @@ class SingleChildContainer extends StatelessWidget {
         ),
 
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8),
+          padding: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               //First Row
@@ -192,7 +193,7 @@ class SingleChildContainer extends StatelessWidget {
 
               //Bottom Row
               //For Align Bottom
-              Spacer(),
+              //Spacer(),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

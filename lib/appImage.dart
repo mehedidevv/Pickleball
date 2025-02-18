@@ -27,6 +27,19 @@ class AppImage{
   static const downloadIcon="assets/images/downloadIcon.png";
   static const timerIcon="assets/images/timerIcon.png";
   static const saveChangesBtn="assets/images/saveChangesBtn.png";
+  static const updatePassword="assets/images/updatePassword.png";
+  static const passwordKey="assets/images/passwordKey.png";
+  static const languageIcon="assets/images/languageIcon.png";
+  static const privacyIcon="assets/images/privacyIcon.png";
+  static const logOutIcon="assets/images/logOutIcon.png";
+  static const editIcon="assets/images/editIcon.png";
+  static const notificationProfile="assets/images/notificationProfile.png";
+  static const slider5="assets/images/slider5.png";
+  static const slider4="assets/images/slider4.png";
+  static const slider3="assets/images/slider3.png";
+  static const slider2="assets/images/slider2.png";
+  static const slider1="assets/images/slider1.png";
+  static const home="assets/images/home.png";
 
 
 }

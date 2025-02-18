@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../sessions_widget/review_widget.dart';
+//import '../../screens/ui/search_screens/sessions/sessions_widget/review_widget.dart';
+import '../../sessions/sessions_widget/review_widget.dart';
+//import '../sessions_widget/review_widget.dart';
 
 
 //ReviewForTrainer Widget

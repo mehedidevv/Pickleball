@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:pickball/appImage.dart';
+import 'package:pickball/screens/ui/profile_screen/profail_screen.dart';
 //import 'package:pickball/screens/ui/booking_scrteens/profile_screen/profail_screen.dart';
 //import 'package:pickball/screens/ui/profile_screen/profail_screen.dart';
 import 'package:pickball/screens/ui/search_screens/search_screen.dart';
 
 import 'booking_scrteens/booking_screen.dart';
-import 'booking_scrteens/profile_screen/profail_screen.dart';
+//import 'booking_scrteens/profile_screen/profail_screen.dart';
 import 'home_screen.dart';
 
 void main() => runApp(MaterialApp(
@@ -49,6 +50,7 @@ class _ExampleState extends State<UiDesign> {
         child: screens.elementAt(_selectedIndex),
       ),
 
+      //Bottom Navigation Bar
       bottomNavigationBar: Padding(
         padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
         child: Container(
@@ -86,7 +88,7 @@ class _ExampleState extends State<UiDesign> {
                   //Home Screen
                   GButton(
                     icon: Icons.circle, // Placeholder to satisfy the required parameter
-                    leading: Image.asset(AppImage.homeIcon, // Path to your asset image
+                    leading: Image.asset(AppImage.home, // Path to your asset image
                       width: 24,  // Adjust size as needed
                       height: 24,
                     ),

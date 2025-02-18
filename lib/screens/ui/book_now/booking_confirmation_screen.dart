@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pickball/screens/ui/booking_scrteens/payment_confirmation.dart';
+import 'package:pickball/screens/ui/book_now/payment_confirmation.dart';
 
 import '../../../appImage.dart';
 

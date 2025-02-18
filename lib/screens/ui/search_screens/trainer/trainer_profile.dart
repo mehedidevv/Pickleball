@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:pickball/screens/ui/search_screens/trainer/trainer_widget/description_trainer_widget.dart';
+import 'package:pickball/screens/ui/search_screens/trainer/trainer_widget/reviewfor_trainer_widget.dart';
 
-import '../../../Widget/trainer_profile.dart';
-import '../../../Widget/trainer_widget/description_trainer_widget.dart';
-import '../../../Widget/trainer_widget/reviewfor_trainer_widget.dart';
+import '../../../../Widget/trainer_profile.dart';
+//import '../../../../Widget/trainer_widget/description_trainer_widget.dart';
+//import '../../../../Widget/trainer_widget/reviewfor_trainer_widget.dart';
 // import '../Widget/trainer_widget/description_trainer_widget.dart';
 // import '../Widget/trainer_widget/reviewfor_trainer_widget.dart';
 // import '../Widget/trainer_profile.dart';
