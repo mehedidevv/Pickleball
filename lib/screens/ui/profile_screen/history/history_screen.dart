@@ -167,16 +167,16 @@ class _HistoryScreenState extends State<HistoryScreen> {
 
                   //Adding Filter Icon
                   //Applying On Click Function
-                  GestureDetector(
-                    onTap: (){
-                      //TODO
-
-                    },
-                    child: SizedBox(
-                        height: 60,
-                        width: 60,
-                        child: Image.asset(AppImage.filterIcon)),
-                  )
+                  // GestureDetector(
+                  //   onTap: (){
+                  //     //TODO
+                  //
+                  //   },
+                  //   child: SizedBox(
+                  //       height: 60,
+                  //       width: 60,
+                  //       child: Image.asset(AppImage.filterIcon)),
+                  // )
                 ],
               ),
             ),

@@ -278,149 +278,7 @@ class BookingConfirmationScreen extends StatelessWidget {
               ),
 
               //Container For Bank Transaction
-              Padding(
-                padding: EdgeInsets.only(left: 10,right: 10,top: 20),
-                child: Container(
-                  height: 250,
-                  width: double.infinity,
-                  //Decoration
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    //border: OutlineInputBorder()
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(
-                        color: Color(0XFFF5F5F5), width: 1), // Rounded corners
-                  ),
-
-                  child: Column(
-                    children: [
-                      //Individual Bank Transaction
-                  Expanded(
-                    child: Padding(
-                    padding: EdgeInsets.only(left: 10,right: 10,top: 10),
-                    child: Container(
-                      height: 80,
-                      width: double.infinity,
-                      //Decoration
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        //border: OutlineInputBorder()
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(
-                            color: Color(0XFFF5F5F5), width: 1), // Rounded corners
-                      ),
-
-                      child: Padding(
-                        padding: EdgeInsets.only(left: 10,right: 10),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            //Adding Logo
-                            SizedBox(
-                              height: 60,
-                              width: 60,
-                              child: Image.asset(AppImage.logoAxisBank),
-                            ),
-
-                            Text('Axis Bank',style: TextStyle(
-                                fontSize: 16,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0XFF606060)
-                            ),),
-
-                            Text('***********87698',style: TextStyle(
-                                fontSize: 16,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0XFF606060)
-                            ),),
-
-                          ],
-                        ),
-                      ),
-
-                    ),),
-                  ),
-
-                      //Individual Bank Transaction
-                  Expanded(
-                    child: Padding(
-                    padding: EdgeInsets.only(left: 10,right: 10,top: 10),
-                    child: Container(
-                      height: 80,
-                      width: double.infinity,
-                      //Decoration
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        //border: OutlineInputBorder()
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(
-                            color: Color(0XFFF5F5F5), width: 1), // Rounded corners
-                      ),
-
-                      child: Padding(
-                        padding: EdgeInsets.only(left: 10,right: 10),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            //Adding Logo
-                            SizedBox(
-                              height: 60,
-                              width: 60,
-                              child: Image.asset(AppImage.visaBank),
-                            ),
-
-                            Text('HDFC Bank',style: TextStyle(
-                                fontSize: 16,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0XFF606060)
-                            ),),
-
-                            Text('***********87698',style: TextStyle(
-                                fontSize: 16,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0XFF606060)
-                            ),),
-
-                          ],
-                        ),
-                      ),
-
-                    ),),
-                  ),
-
-                      // Row For Add New Card
-                      Expanded(
-                        child: Padding(
-                          padding: EdgeInsets.only(left: 30),
-                          child: Row(
-                            children: [
-                              //Adding Add Icon
-                              SizedBox(
-                                height: 40,
-                                width: 40,
-                                child: Image.asset(AppImage.addIcon),
-                              ),
-                              SizedBox(width: 10,),
-                              Text('Add New Card',style: TextStyle(
-                                  fontSize: 16,
-                                  fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.w400,
-                                  color: Color(0XFF606060)
-                              ),)
-                            ],
-                          ),
-                        ),
-                      )
-
-                    ],
-                  ),
-
-                ),
-              ),
+              AxisBankTransaction(),
 
               //Proceed to Pay Button
               Padding(
@@ -454,6 +312,158 @@ class BookingConfirmationScreen extends StatelessWidget {
 
           ),
         ),
+      ),
+    );
+  }
+}
+
+//Axis Bank Transaction Widget
+class AxisBankTransaction extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: 10,right: 10,top: 20),
+      child: Container(
+        height: 250,
+        width: double.infinity,
+        //Decoration
+        decoration: BoxDecoration(
+          color: Colors.white,
+          //border: OutlineInputBorder()
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(
+              color: Color(0XFFF5F5F5), width: 1), // Rounded corners
+        ),
+
+        child: Column(
+          children: [
+            //Individual Bank Transaction
+        Expanded(
+          child: Padding(
+          padding: EdgeInsets.only(left: 10,right: 10,top: 10),
+          child: Container(
+            height: 80,
+            width: double.infinity,
+            //Decoration
+            decoration: BoxDecoration(
+              color: Colors.white,
+              //border: OutlineInputBorder()
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(
+                  color: Color(0XFFF5F5F5), width: 1), // Rounded corners
+            ),
+
+            child: Padding(
+              padding: EdgeInsets.only(left: 10,right: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+
+                 // Adding Logo
+                  SizedBox(
+                    height: 60,
+                    width: 60,
+                    child: Image.asset(AppImage.logoAxisBank),
+                  ),
+
+                  Text('Axis Bank',style: TextStyle(
+                      fontSize: 16,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w400,
+                      color: Color(0XFF606060)
+                  ),),
+
+                  Text('***********87698',style: TextStyle(
+                      fontSize: 16,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w400,
+                      color: Color(0XFF606060)
+                  ),),
+
+                ],
+              ),
+            ),
+
+          ),),
+        ),
+
+            //Individual Bank Transaction
+        Expanded(
+          child: Padding(
+          padding: EdgeInsets.only(left: 10,right: 10,top: 10),
+          child: Container(
+            height: 80,
+            width: double.infinity,
+            //Decoration
+            decoration: BoxDecoration(
+              color: Colors.white,
+              //border: OutlineInputBorder()
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(
+                  color: Color(0XFFF5F5F5), width: 1), // Rounded corners
+            ),
+
+            child: Padding(
+              padding: EdgeInsets.only(left: 10,right: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  //Adding Logo
+                  SizedBox(
+                    height: 60,
+                    width: 60,
+                    child: Image.asset(AppImage.visaBank),
+                  ),
+
+                  Text('HDFC Bank',style: TextStyle(
+                      fontSize: 16,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w400,
+                      color: Color(0XFF606060)
+                  ),),
+
+                  Text('***********87698',style: TextStyle(
+                      fontSize: 16,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w400,
+                      color: Color(0XFF606060)
+                  ),),
+
+                ],
+              ),
+            ),
+
+          ),),
+        ),
+
+            // Row For Add New Card
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(left: 30),
+                child: Row(
+                  children: [
+                    //Adding Add Icon
+                    SizedBox(
+                      height: 40,
+                      width: 40,
+                      child: Image.asset(AppImage.addIcon),
+                    ),
+                    SizedBox(width: 10,),
+                    Text('Add New Card',style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: 'Roboto',
+                        fontWeight: FontWeight.w400,
+                        color: Color(0XFF606060)
+                    ),)
+                  ],
+                ),
+              ),
+            )
+
+          ],
+        ),
+
       ),
     );
   }

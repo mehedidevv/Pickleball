@@ -12,7 +12,13 @@ class ProfileNotificationScreen extends StatefulWidget {
 }
 
 class _ProfileNotificationScreenState extends State<ProfileNotificationScreen> {
-  bool _isSwitched = true;
+
+  bool _isSwitchedBooking = true;
+  bool _isSwitchedPayment = true;
+  bool _isSwitchedAnnouncement = true;
+  bool _isSwitchedPreference = true;
+
+
 
   int? _selectedOption = 0;
 
@@ -79,10 +85,10 @@ class _ProfileNotificationScreenState extends State<ProfileNotificationScreen> {
 
                       //Toggle Switch
                       Switch(
-                        value: _isSwitched,
+                        value: _isSwitchedBooking,
                         onChanged: (value) {
                           setState(() {
-                            _isSwitched = value;
+                            _isSwitchedBooking = value;
                           });
                         },
                         activeColor: Colors.green,
@@ -190,10 +196,10 @@ class _ProfileNotificationScreenState extends State<ProfileNotificationScreen> {
 
                       //Toggle Switch
                       Switch(
-                        value: _isSwitched,
+                        value: _isSwitchedPayment,
                         onChanged: (value) {
                           setState(() {
-                            _isSwitched = value;
+                            _isSwitchedPayment = value;
                           });
                         },
                         activeColor: Colors.green,
@@ -301,10 +307,10 @@ class _ProfileNotificationScreenState extends State<ProfileNotificationScreen> {
 
                       //Toggle Switch
                       Switch(
-                        value: _isSwitched,
+                        value: _isSwitchedAnnouncement,
                         onChanged: (value) {
                           setState(() {
-                            _isSwitched = value;
+                            _isSwitchedAnnouncement = value;
                           });
                         },
                         activeColor: Colors.green,
@@ -394,10 +400,10 @@ class _ProfileNotificationScreenState extends State<ProfileNotificationScreen> {
 
                       //Toggle Switch
                       Switch(
-                        value: _isSwitched,
+                        value: _isSwitchedPreference,
                         onChanged: (value) {
                           setState(() {
-                            _isSwitched = value;
+                            _isSwitchedPreference = value;
                           });
                         },
                         activeColor: Colors.green,

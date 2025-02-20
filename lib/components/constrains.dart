@@ -59,5 +59,20 @@ const kBookingNotification=TextStyle(
     fontFamily: 'Roboto'
 );
 
+//Recommended Text Style
+const kRecommendedtext=TextStyle(
+  fontSize: 16,
+  fontFamily: 'Roboto',
+  fontWeight: FontWeight.w500,
+  color: Color(0XFF2F2F36),
+);
+
+//See more Text Style
+const kSeeMoretext=TextStyle(
+  fontSize: 11,
+  fontFamily: 'Roboto',
+  fontWeight: FontWeight.w400,
+  color: Color(0XFF305FA1),
+);
 
 

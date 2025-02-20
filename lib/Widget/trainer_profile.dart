@@ -1,14 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:pickball/Widget/single_trainer_widget.dart';
 import 'package:pickball/screens/ui/search_screens/search_screen.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../appImage.dart';
 
 //Trainer Profile Container Widget
 class TrainerProfile_Widget extends StatelessWidget {
-  const TrainerProfile_Widget({
-    super.key,
-  });
+
+
+  // // Function to launch the email client
+  Future<void> _launchEmail() async {
+    final Uri emailUri = Uri(
+      scheme: 'mailto',
+      path: 'smith@example.com', // Predefined recipient email address
+      query: Uri.encodeFull('subject=Your Subject Here&body=This is the email body'), // Predefined subject and body
+    );
+
+    if (await canLaunch(emailUri.toString())) {
+      await launch(emailUri.toString()); // Launch the email client with the parameters
+    } else {
+      throw 'Could not open the email client';
+    }
+  }
+
+Future<void> _mailluncher() async{
+  launch('mailto:mehedihasan29122001@gmail.com?'
+      'subject=this isa subject&'
+      'body=body text');
+}
 
   @override
   Widget build(BuildContext context) {
@@ -168,9 +188,13 @@ class TrainerProfile_Widget extends StatelessWidget {
                     ),
                     padding: EdgeInsets.symmetric(vertical: 10, horizontal: 16), // Button padding
                   ),
+                  //On Pressed for Email Button
                   onPressed: () {
-                    print("Email Button Pressed");
+                   //Add Mail Luncher
+                    _mailluncher();
+
                   },
+
                   child: Row(
                     mainAxisSize: MainAxisSize.min, // Adjust button size to content
                     children: [
@@ -206,8 +230,12 @@ class TrainerProfile_Widget extends StatelessWidget {
                     ),
                     padding: EdgeInsets.symmetric(vertical: 10, horizontal: 16), // Button padding
                   ),
+
+                  //On Pressed For Call Trainer Button
                   onPressed: () {
-                    print("Email Button Pressed");
+                  //  print("Call Trainer");
+                    //Intent TO Dial Pad
+                    launch('tel: +880');
                   },
                   child: Row(
                     mainAxisSize: MainAxisSize.min, // Adjust button size to content

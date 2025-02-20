@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pickball/screens/ui/book_now/booking_confirmation_screen.dart';
 import 'package:pickball/screens/ui/profile_screen/history/write_review_screen.dart';
 
 import '../../../../../appImage.dart';
@@ -180,27 +181,33 @@ class HistoryComplete extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       //Rebook Button
-                      Container(
-                        height: 50,
-                        width: 130,
-                        decoration: BoxDecoration(
-                          color: Color(0XFF305FA1),
-                          // Light blue background
-                          border: Border.all(
-                              color: Color(0XFF305FA1),
-                              width: 1),
-                          // Blue border with width
-                          borderRadius:
-                          BorderRadius.circular(20), // Rounded corners
-                        ),
-                        child: Center(
-                          child: Text(
-                            'Rebook',
-                            style: TextStyle(
-                              fontSize: 17,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w700,
-                              color: Colors.white,
+                      GestureDetector(
+                        onTap: (){
+                          //OnClick Functionality
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => BookingConfirmationScreen()));
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 130,
+                          decoration: BoxDecoration(
+                            color: Color(0XFF305FA1),
+                            // Light blue background
+                            border: Border.all(
+                                color: Color(0XFF305FA1),
+                                width: 1),
+                            // Blue border with width
+                            borderRadius:
+                            BorderRadius.circular(20), // Rounded corners
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Rebook',
+                              style: TextStyle(
+                                fontSize: 17,
+                                fontFamily: 'Roboto',
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),

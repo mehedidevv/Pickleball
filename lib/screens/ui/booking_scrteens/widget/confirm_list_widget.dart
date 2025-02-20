@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pickball/screens/ui/book_now/booking_confirmation_screen.dart';
 
 import '../../../../appImage.dart';
 
@@ -154,25 +155,30 @@ class SingleConfirmList extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       //Reschedule Button
-                      Container(
-                        height: 40,
-                        width: 130,
-                        decoration: BoxDecoration(
-                          color: Color(0XFF305FA1).withOpacity(0.1),
-                          // Light blue background
-                          border: Border.all(color: Color(0XFF305FA1), width: 1),
-                          // Blue border with width
-                          borderRadius:
-                          BorderRadius.circular(20), // Rounded corners
-                        ),
-                        child: Center(
-                          child: Text(
-                            'Reschedule',
-                            style: TextStyle(
-                              fontSize: 17,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w700,
-                              color: Color(0XFF305FA1),
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => BookingConfirmationScreen()));
+                        },
+                        child: Container(
+                          height: 40,
+                          width: 130,
+                          decoration: BoxDecoration(
+                            color: Color(0XFF305FA1).withOpacity(0.1),
+                            // Light blue background
+                            border: Border.all(color: Color(0XFF305FA1), width: 1),
+                            // Blue border with width
+                            borderRadius:
+                            BorderRadius.circular(20), // Rounded corners
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Reschedule',
+                              style: TextStyle(
+                                fontSize: 17,
+                                fontFamily: 'Roboto',
+                                fontWeight: FontWeight.w700,
+                                color: Color(0XFF305FA1),
+                              ),
                             ),
                           ),
                         ),

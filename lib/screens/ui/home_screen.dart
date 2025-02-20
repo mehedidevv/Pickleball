@@ -54,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         Row(
                           children: [
-                            //TODO For Circular Box
+                            //Circular Box For Load Image
                             Container(
                               padding: EdgeInsets.all(10),
 
@@ -70,9 +70,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                     },
 
                                      // child: Image.asset(AppImage.profileImg,scale: 3,),
-
                                    child:  CircleAvatar(
-                                      radius: 50, // The radius of the circle
+                                      radius: 40, // The radius of the circle
                                      backgroundImage: AssetImage(AppImage.profileImg),
                                          
                                     ),
@@ -95,6 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ],
                         ),
+                        //Button For Notification
                         InkWell(
                           onTap: () {
                             // Navigate TO Notification Screen
@@ -124,8 +124,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
 
                     SizedBox(
-                      height: 10,
+                      height: 5,
                     ),
+
                     //Implementing Second Container
                     Container(
                       height: 130,
@@ -178,24 +179,20 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         Text(
                           'Recommended for You',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w500,
-                            color: Color(0XFF2F2F36),
-                          ),
+                          style: kRecommendedtext
                         ),
                         Row(
                           children: [
-                            Text(
-                              'See more',
-                              style: TextStyle(
-                                fontSize: 11,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0XFF305FA1),
+                            GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => SearchScreen()));
+                              },
+                              child: Text(
+                                'See more',
+                                style: kSeeMoretext
                               ),
                             ),
+
                             SizedBox(width: 10,),
                             SizedBox(
                               child: GestureDetector(
@@ -262,23 +259,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Recommended For You',style: TextStyle(
-                              fontFamily: 'Roboto',
-                              fontSize: 18,
-                              fontWeight: FontWeight.w700,
-                              color: Color(0XFF2F2F36),
-                              letterSpacing: 0.2
-
-                          ),),
+                          Text('Recommended For You',style: kRecommendedtext,),
                           Row(
                             children: [
-                              Text('See More...',style: TextStyle(
-                                  fontFamily: 'Roboto',
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color(0XFF305FA1),
-                                  letterSpacing: 0.2
-                              ),),
+                              GestureDetector(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => SearchScreen()));
+                                },
+                                child: Text('See More...',style: kSeeMoretext,),
+                              ),
 
                               SizedBox(width: 10,),
 

@@ -22,7 +22,7 @@ class _BookingScreenState extends State<BookingScreen> {
       home: Scaffold(
         body: Column(
           children: [
-            //Row For Sessions And Trainers
+            //Row For Confirm  And WaitList
             Padding(
               padding: EdgeInsets.only(top: 50),
               child: Row(
@@ -129,16 +129,16 @@ class _BookingScreenState extends State<BookingScreen> {
 
                   //Adding Filter Icon
                   //Applying On Click Function
-                  GestureDetector(
-                    onTap: (){
-                      //TODO
-
-                    },
-                    child: SizedBox(
-                        height: 60,
-                        width: 60,
-                        child: Image.asset(AppImage.filterIcon)),
-                  )
+                  // GestureDetector(
+                  //   onTap: (){
+                  //     //TODO
+                  //
+                  //   },
+                  //   child: SizedBox(
+                  //       height: 60,
+                  //       width: 60,
+                  //       child: Image.asset(AppImage.filterIcon)),
+                  // )
                 ],
               ),
             ),

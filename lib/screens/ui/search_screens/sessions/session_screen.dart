@@ -172,6 +172,7 @@ class _SessionScreenState extends State<SessionScreen> {
             ),
           ),
 
+
           //Row For Descriptions And Reviews
           Padding(
             padding: EdgeInsets.only(top: 10),

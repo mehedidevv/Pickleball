@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pickball/screens/ui/book_now/booking_confirmation_screen.dart';
 
 import '../../../../../appImage.dart';
 
@@ -37,34 +38,38 @@ class HistoryUpcoming extends StatelessWidget {
                   children: [
 
                     //Text For Doubles Strategy Masterclass
-                    Text('Doubles Strategy Masterclass',style: TextStyle(
-                      fontSize: 16,
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w700,
-                      color: Color(0XFF000000)
-                    ),),
+                    Expanded(
+                      child: Text('Doubles Strategy Masterclass',style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: 'Roboto',
+                        fontWeight: FontWeight.w700,
+                        color: Color(0XFF000000)
+                      ),),
+                    ),
 
                     //Complete Button
-                    ElevatedButton(
-                      onPressed: () {
-                        // Add action when button is pressed
-                        print('Complete button pressed');
-                      },
-
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0XFFDEB42B),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20), // Rounded corners
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          // Add action when button is pressed
+                          print('Complete button pressed');
+                        },
+                      
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0XFFDEB42B),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20), // Rounded corners
+                          ),
+                          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30), // Button padding
                         ),
-                        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30), // Button padding
-                      ),
-                      child: Text(
-                        'Canceled', // Button text
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w400,
-                            color: Colors.white
+                        child: Text(
+                          'Canceled', // Button text
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white
+                          ),
                         ),
                       ),
                     ),
@@ -75,29 +80,32 @@ class HistoryUpcoming extends StatelessWidget {
 
               Expanded(
                 flex: 2,
-                child: Row(
-                  children: [
-                    //Load Trainer Image
-                    CircleAvatar(
-                      radius: 20,
-                      backgroundImage: AssetImage(AppImage.trainerImg),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Text(
-                      'Coach John Smith',
-                      style: TextStyle(
-                          fontFamily: 'Roboto',
-                          fontSize: 15,
-                          fontWeight: FontWeight.w500,
-                          color: Color(0XFF4D4D55)),
-                    ),
+                child: Padding(
+                  padding: EdgeInsets.only(top: 10),
+                  child: Row(
+                    children: [
+                      //Load Trainer Image
+                      CircleAvatar(
+                        radius: 20,
+                        backgroundImage: AssetImage(AppImage.trainerImg),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text(
+                        'Coach John Smith',
+                        style: TextStyle(
+                            fontFamily: 'Roboto',
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500,
+                            color: Color(0XFF4D4D55)),
+                      ),
 
 
 
 
-                  ],
+                    ],
+                  ),
                 ),
               ),
 
@@ -175,28 +183,34 @@ class HistoryUpcoming extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
 
-                      //Rebook Button
-                      Container(
-                        height: 50,
-                        width: 130,
-                        decoration: BoxDecoration(
-                          color: Color(0XFF305FA1).withOpacity(0.1),
-                          // Light blue background
-                          border: Border.all(
-                              color: Color(0XFF305FA1),
-                              width: 1),
-                          // Blue border with width
-                          borderRadius:
-                          BorderRadius.circular(10), // Rounded corners
-                        ),
-                        child: Center(
-                          child: Text(
-                            'Reschedule',
-                            style: TextStyle(
-                              fontSize: 17,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w700,
-                              color: Color(0XFF305FA1),
+                      //Reschedule Button
+                      GestureDetector(
+                        onTap: (){
+                          //OnClick Function
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => BookingConfirmationScreen()));
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 130,
+                          decoration: BoxDecoration(
+                            color: Color(0XFF305FA1).withOpacity(0.1),
+                            // Light blue background
+                            border: Border.all(
+                                color: Color(0XFF305FA1),
+                                width: 1),
+                            // Blue border with width
+                            borderRadius:
+                            BorderRadius.circular(10), // Rounded corners
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Reschedule',
+                              style: TextStyle(
+                                fontSize: 17,
+                                fontFamily: 'Roboto',
+                                fontWeight: FontWeight.w700,
+                                color: Color(0XFF305FA1),
+                              ),
                             ),
                           ),
                         ),

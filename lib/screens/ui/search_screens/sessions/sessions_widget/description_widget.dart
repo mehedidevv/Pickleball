@@ -20,8 +20,9 @@ class DescriptionSessions extends StatelessWidget {
             children: [
 
               //Text For Program Description
-              Text('Program Description',style: TextStyle(
-                  fontSize: 19,
+              Text('Program Description',
+                style: TextStyle(
+                  fontSize: 18,
                   fontFamily: 'Roboto',
                   fontWeight: FontWeight.w700,
                   color: Color(0XFF000000)
@@ -29,7 +30,7 @@ class DescriptionSessions extends StatelessWidget {
 
               //Text For Description
               Padding(
-                padding: EdgeInsets.only(top: 10),
+                padding: EdgeInsets.only(top: 5),
                 child: Text('Master the art of playing doubles in this comprehensive session '
                     'designed for intermediate to advanced Pickleball players.'
                     ' Learn winning strategies, effective communication techniques,'
@@ -46,7 +47,7 @@ class DescriptionSessions extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: 10),
                 child: Text('Location',style: TextStyle(
-                    fontSize: 19,
+                    fontSize: 18,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w700,
                     color: Color(0XFF000000)
@@ -67,7 +68,7 @@ class DescriptionSessions extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: 10),
                 child: Text('Session Type',style: TextStyle(
-                    fontSize: 19,
+                    fontSize: 18,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w700,
                     color: Color(0XFF000000)
@@ -89,7 +90,7 @@ class DescriptionSessions extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: 10),
                 child: Text('Skill Level',style: TextStyle(
-                    fontSize: 19,
+                    fontSize: 18,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w700,
                     color: Color(0XFF000000)
@@ -110,7 +111,7 @@ class DescriptionSessions extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: 10),
                 child: Text('Session Pricing',style: TextStyle(
-                    fontSize: 19,
+                    fontSize: 18,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w700,
                     color: Color(0XFF000000)
@@ -131,7 +132,7 @@ class DescriptionSessions extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: 15),
                 child: Text('Trainer',style: TextStyle(
-                    fontSize: 19,
+                    fontSize: 18,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w700,
                     color: Colors.black
@@ -195,7 +196,7 @@ class DescriptionSessions extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: 15),
                 child: Text('Key Learning And Objectives',style: TextStyle(
-                    fontSize: 19,
+                    fontSize: 18,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w700,
                     color: Colors.black
@@ -236,7 +237,7 @@ class DescriptionSessions extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: 15),
                 child: Text('Session Schedule ',style: TextStyle(
-                    fontSize: 19,
+                    fontSize: 18,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w700,
                     color: Colors.black

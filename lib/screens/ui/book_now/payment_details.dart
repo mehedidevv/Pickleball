@@ -38,7 +38,7 @@ class PaymentDetails extends StatelessWidget {
             ),
           ),
           title: Text(
-            'Payment Confirmation',
+            'Payment Details',
             style: TextStyle(
                 fontSize: 20,
                 fontFamily: 'OpenSans',
